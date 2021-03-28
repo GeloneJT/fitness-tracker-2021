@@ -33,6 +33,20 @@ router.get("api/workouts/range", (req, res) => {
     });
 });
 
+router.put("api/workouts/:id", (req, res) => {
+  Workout.findByIdAndUpdate(
+    {},
+    { $push: { exercises: req.body } },
+    { new: true }
+  )
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).sjon(err);
+    });
+});
+
 //Look up  .aggregate for Mongoose
 
 router.delete("/api/workouts", ({ body }, res) => {
