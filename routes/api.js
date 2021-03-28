@@ -13,9 +13,15 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 
 //Get workouts by ID
-router.get("api/workouts/:id", (req, res) => {
-  Workout.findById(req.params.id).then()
-})
+router.get("api/workouts", (req, res) => {
+  Workout.find({})
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
 
 //Look up  .aggregate for Mongoose
 
