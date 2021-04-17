@@ -53,6 +53,9 @@ Mongo Atlas can also be implemented through connecting a MondoAtlas account via 
 
 ![FitnessMongo](img/FitnessMongo.png)
 
+
+Click [here](https://rut-fitness-tracker.herokuapp.com/?id=607375df2b7fc8001531f51c) for a deployed link to the working application. 
+
   <hr>
 
 ## Credit
